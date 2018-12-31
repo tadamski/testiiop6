@@ -6,8 +6,11 @@ import javax.ejb.RemoteHome;
 import javax.ejb.SessionContext;
 import javax.ejb.Stateless;
 
+import org.jboss.security.annotation.SecurityDomain;
+
 @Stateless
 @RemoteHome(HelloRemoteHome.class)
+@SecurityDomain("other")
 public class HelloSessionBean
 {
    @RolesAllowed("ejbtest")
