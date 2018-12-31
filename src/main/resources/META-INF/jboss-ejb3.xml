@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss:jboss xmlns:jboss="http://www.jboss.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.jboss.com/xml/ns/javaee http://www.jboss.org/j2ee/schema/jboss_5_0.xsd http://java.sun.com/xml/ns/javaee http://www.jboss.org/j2ee/schema/jboss-ejb3-spec-2_0.xsd urn:security jboss-ejb-security_1_0.xsd urn:security-role jboss-ejb-security-role_1_0.xsd" version="3.1" impl-version="2.0">
+  <assembly-descriptor xmlns="http://java.sun.com/xml/ns/javaee">
+    <iiop xmlns:xalan="http://xml.apache.org/xalan" xmlns:s="urn:security" xmlns:ext="xalan://org.jboss.ts.lib.porting.EjbJarHandler" xmlns:sr="urn:security-role" xmlns="urn:iiop">
+      <ejb-name xmlns="http://java.sun.com/xml/ns/javaee">HelloSessionBean</ejb-name>
+      <binding-name>HelloSessionBean</binding-name>
+      <ior-security-config>
+        <transport-config>
+          <integrity>supported</integrity>
+          <confidentiality>supported</confidentiality>
+          <establish-trust-in-target>supported</establish-trust-in-target>
+          <establish-trust-in-client>supported</establish-trust-in-client>
+        </transport-config>
+        <as-context>
+          <auth-method>username_password</auth-method>
+          <realm>default</realm>
+          <required>false</required>
+        </as-context>
+        <sas-context>
+          <caller-propagation>supported</caller-propagation>
+        </sas-context>
+      </ior-security-config>
+    </iiop>
+  </assembly-descriptor>
+</jboss:jboss>
