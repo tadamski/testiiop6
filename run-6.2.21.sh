@@ -9,7 +9,7 @@ client="target/testiiop.jar:${jbossHome}/bin/client/jboss-cli-client.jar:${jboss
 
 cp="${client}:${jacorb}:${slf4j}"
 
-JAVA_OPTS="-Djava.security.policy=$PWD/java.policy -Djava.security.auth.login.config=$PWD/appclientlogin.conf -Dcom.sun.CORBA.ORBUseDynamicStub=true -Dorg.omg.CORBA.ORBClass=org.jacorb.orb.ORB -Dorg.omg.CORBA.ORBSingletonClass=org.jacorb.orb.ORBSingleton -Dorg.omg.PortableInterceptor.ORBInitializerClass.org.jboss.as.jacorb.csiv2.SASClientInitializer -Djava.endorsed.dirs=${jbossHome}/layers/base/org/jboss/as/jacorb/main/"
+JAVA_OPTS="-Djava.security.policy=$PWD/java.policy -Djava.security.auth.login.config=$PWD/appclientlogin.conf -Dcom.sun.CORBA.ORBUseDynamicStub=true -Dorg.omg.CORBA.ORBClass=org.jacorb.orb.ORB -Dorg.omg.CORBA.ORBSingletonClass=org.jacorb.orb.ORBSingleton -Dorg.omg.PortableInterceptor.ORBInitializerClass.org.jboss.as.jacorb.csiv2.SASClientInitializer" 
 
 echo "java $JAVA_OPTS -cp $cp org.jboss.test.iiop.client.JDKClient $*"
 

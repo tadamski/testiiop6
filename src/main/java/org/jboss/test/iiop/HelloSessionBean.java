@@ -6,7 +6,7 @@ import javax.ejb.RemoteHome;
 import javax.ejb.SessionContext;
 import javax.ejb.Stateless;
 
-import org.jboss.security.annotation.SecurityDomain;
+import org.jboss.ejb3.annotation.SecurityDomain;
 
 @Stateless
 @RemoteHome(HelloRemoteHome.class)
