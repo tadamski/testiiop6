@@ -81,7 +81,9 @@
         <groupId>org.jboss.as</groupId>
     <artifactId>jboss-as-jacorb</artifactId>
     <version>7.5.0.Final-redhat-21</version>
+<!--
     <packaging>jar</packaging>
+-->
     </dependency>
     </dependencies>
     
