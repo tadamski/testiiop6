@@ -2,7 +2,7 @@
 Jacob EJB sample with security
 
 # Add the test user
-$JBOSS_HOME/bin/add-user.sh -a -u ejbtest -p ejbtest@123
+$JBOSS_HOME/bin/add-user.sh -a -u ejbtest -p ejbtest@123 --role ejbtest
 
 # Deploy
 
